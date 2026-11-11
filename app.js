@@ -268,13 +268,19 @@
     const scriptUrl = state.googleScriptUrl;
     if (scriptUrl && scriptUrl.startsWith('http')) {
       try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 8000); // 8s safety timeout
+
         await fetch(scriptUrl, {
           method: 'POST',
           mode: 'no-cors',
           cache: 'no-cache',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
+          signal: controller.signal
         });
+
+        clearTimeout(timeoutId);
       } catch (err) {
         console.warn('Google Sheets sync note:', err);
       }

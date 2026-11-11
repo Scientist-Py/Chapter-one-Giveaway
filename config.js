@@ -12,7 +12,7 @@ const CONFIG = {
   resultDateText: "Sunday, 15th November",
 
   // Google Apps Script Web App Deployment URL
-  googleAppsScriptUrl: "",
+  googleAppsScriptUrl: "https://script.google.com/macros/s/AKfycbwjjCqsdog3MMUEDW7ZEplrYZbXxGOwel7BveWy9khD5unC1Z8wD4f5ci54MVH8gSkd/exec",
 
   // The 3 Chapter One Cafe Offers
   offers: [
