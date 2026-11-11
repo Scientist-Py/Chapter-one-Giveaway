@@ -155,7 +155,8 @@
       familyCard.classList.add('highlight-focus');
     }
 
-    DOM.inputName.focus();
+    // Scroll to top of card smoothly without auto-focusing input
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }
 
   /**
