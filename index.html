@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chapter One Cafe • Exclusive Offers & Giveaway</title>
+  <title>Chapter One Cafe • Exclusive Community Giveaway</title>
   
   <link rel="icon" href="assets/logo.jpg">
   
-  <!-- Typography: Inter + Plus Jakarta Sans + JetBrains Mono + Playfair/Outfit for pretty editorial touch -->
+  <!-- Premium Fonts: Outfit (Display & Numbers) + Plus Jakarta Sans (Lovable Body) + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   
   <!-- Canvas Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
@@ -19,133 +19,101 @@
 </head>
 <body>
 
-  <!-- Google 4-Color Ambient Top Stripe -->
-  <div class="google-top-stripe" aria-hidden="true">
-    <div class="stripe blue"></div>
-    <div class="stripe red"></div>
-    <div class="stripe yellow"></div>
-    <div class="stripe green"></div>
-  </div>
+  <!-- Aesthetic Ambient Background Glows -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
+  <!-- Warm Gold & Rose Top Accent Line -->
+  <div class="cafe-accent-stripe" aria-hidden="true"></div>
 
   <div class="app-layout">
     
     <!-- Header / Brand Section -->
-    <header class="app-header">
-      <div class="brand-row">
-        <div class="logo-pod">
+    <header class="cafe-header">
+      <div class="brand-cluster">
+        <div class="logo-frame">
           <img src="assets/logo.jpg" alt="Chapter One Cafe Logo" class="cafe-logo">
         </div>
-        <div class="brand-info">
-          <div class="brand-title-wrap">
+        <div class="brand-copy">
+          <div class="brand-title-line">
             <h1 class="brand-name">Chapter One Cafe</h1>
-            <span class="pill-badge">OFFICIAL GIVEAWAY</span>
+            <span class="family-badge">❤️ COMMUNITY PERKS</span>
           </div>
-          <p class="brand-sub">Crafted Food • Great Stories • Creative Community</p>
+          <p class="brand-motto">Where Good Stories & Handcrafted Food Meet</p>
         </div>
       </div>
 
-      <!-- Result Date Announcement Pill -->
-      <div class="result-announcement-bar">
-        <div class="calendar-icon-box">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Result Date Banner (Sunday, 15th Nov) -->
+      <div class="event-date-card">
+        <div class="date-icon-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
             <line x1="16" y1="2" x2="16" y2="6"></line>
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
         </div>
-        <span class="announcement-text">
-          Giveaway Results: <strong>Sunday, 15th November</strong>
-        </span>
+        <div class="date-text-wrap">
+          <span class="date-label">GIVEAWAY ANNOUNCEMENT:</span>
+          <strong class="date-highlight">Sunday, 15th November</strong>
+        </div>
       </div>
     </header>
 
     <!-- Main Card -->
-    <main class="minimal-card">
+    <main class="cafe-card">
       
       <!-- ======================================================== -->
-      <!-- STEP 1: CHOOSE OFFER (3 Graphical Cards)                 -->
+      <!-- STEP 1: CHOOSE OFFER (3 Graphical & Catchy Cards)       -->
       <!-- ======================================================== -->
-      <section id="step-offers-view" class="card-view">
+      <section id="step-offers-view" class="card-screen">
         
-        <div class="view-header">
-          <h2 class="view-title">Choose 1 offer to register your number:</h2>
-          <p class="view-subtitle">Select an exclusive offer below. Each phone number can register for one offer.</p>
+        <div class="screen-intro">
+          <span class="step-chip">STEP 01 • CHOOSE YOUR PERK</span>
+          <h2 class="screen-heading">Select your exclusive offer to claim:</h2>
+          <p class="screen-sub">Pick 1 offer to register your mobile number. Verified at the counter.</p>
         </div>
 
         <!-- 3 Graphical Offers Container -->
-        <div class="graphical-offers-list" id="offers-container">
+        <div class="offers-grid" id="offers-container">
           <!-- Dynamically injected via JavaScript with vector graphics -->
         </div>
 
-        <!-- CTA Action Area -->
-        <div class="view-action-footer">
-          <button type="button" id="btn-continue-to-form" class="minimal-btn primary" disabled>
+        <!-- Action Footer -->
+        <div class="screen-action-wrap">
+          <button type="button" id="btn-continue-to-form" class="cafe-btn primary full-width" disabled>
             <span>Continue with Selected Offer</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </button>
-          <span class="subtext-note">🔒 Strictly 1 claim per mobile number • Verified at cafe counter</span>
+          <span class="secure-note">🔒 One claim per customer • Verified instantly at Chapter One Cafe</span>
         </div>
 
-        <!-- Chapter One Family Statement (Clean & Graphical) -->
-        <section class="family-card">
-          <div class="family-card-header">
-            <div class="family-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-              <span>THE CHAPTER ONE FAMILY</span>
-            </div>
-            <h3 class="family-title">More than a cafe — A place where stories happen.</h3>
+        <!-- The Chapter One Family Commitment Box -->
+        <section class="family-commitment-box">
+          <div class="commitment-top">
+            <span class="commitment-tag">THE CHAPTER ONE PROMISE</span>
+            <h3 class="commitment-title">More than a cafe — A place where stories happen.</h3>
           </div>
 
-          <div class="family-card-body">
-            <p>
-              We created these offers because we want our Chapter One family to grow closer and feel truly appreciated every time you walk in.
-            </p>
-            <p>
-              Whether you're brainstorming a project, studying for exams, or sharing a table with friends, we are committed to giving you fast, attentive service, comforting handcrafted flavors, and an atmosphere that genuinely values your time.
-            </p>
-          </div>
+          <p class="commitment-desc">
+            We created these offers because we want our Chapter One family to grow closer and feel truly appreciated every time you walk in. Whether you're brainstorming a project, studying for exams, or sharing a table with friends, we are committed to giving you fast, attentive service, comforting handcrafted flavors, and an atmosphere that genuinely values your time.
+          </p>
 
-          <div class="family-pillars">
-            <div class="pillar-item">
-              <div class="pillar-icon-box blue">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                </svg>
-              </div>
-              <span class="pillar-label">Fast Service</span>
+          <div class="commitment-pillars">
+            <div class="pillar-chip">
+              <span class="pillar-dot amber"></span>
+              <span>⚡ Fast Attentive Service</span>
             </div>
-            
-            <div class="pillar-item">
-              <div class="pillar-icon-box amber">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                  <line x1="6" y1="1" x2="6" y2="4"></line>
-                  <line x1="10" y1="1" x2="10" y2="4"></line>
-                  <line x1="14" y1="1" x2="14" y2="4"></line>
-                </svg>
-              </div>
-              <span class="pillar-label">Crafted Flavors</span>
+            <div class="pillar-chip">
+              <span class="pillar-dot rose"></span>
+              <span>☕ Handcrafted Quality</span>
             </div>
-
-            <div class="pillar-item">
-              <div class="pillar-icon-box emerald">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <span class="pillar-label">Creative Community</span>
+            <div class="pillar-chip">
+              <span class="pillar-dot gold"></span>
+              <span>🤝 Creative Community</span>
             </div>
           </div>
         </section>
@@ -153,76 +121,106 @@
       </section>
 
       <!-- ======================================================== -->
-      <!-- STEP 2: REGISTRATION FORM                                -->
+      <!-- STEP 2: REGISTRATION FORM (LOVABLE & GRAPHICAL)          -->
       <!-- ======================================================== -->
-      <section id="step-form-view" class="card-view" style="display: none;">
+      <section id="step-form-view" class="card-screen" style="display: none;">
         
-        <div class="view-header">
-          <button type="button" id="btn-back-to-offers" class="link-back">
+        <div class="screen-intro">
+          <button type="button" id="btn-back-to-offers" class="link-back-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
             <span>Change selected offer</span>
           </button>
-          <h2 class="view-title">Enter your details to register:</h2>
+          <span class="step-chip">STEP 02 • LOCK IN YOUR ENTRY</span>
+          <h2 class="screen-heading">Enter your details to claim:</h2>
         </div>
 
         <!-- Selected Offer Display Pill -->
-        <div class="active-offer-pill" id="selected-offer-banner">
-          <div class="pill-graphic" id="sel-banner-icon-box">
+        <div class="active-perk-summary" id="selected-offer-banner">
+          <div class="perk-graphic-pod" id="sel-banner-icon-box">
             <!-- Icon injected via JS -->
           </div>
-          <div class="pill-details">
-            <span class="pill-tag" id="sel-banner-badge">SELECTED OFFER</span>
-            <strong class="pill-title" id="sel-banner-title">Spend ₹499 & Get Flat 18% OFF</strong>
-            <p class="pill-sub" id="sel-banner-desc">Instant discount applied on orders of ₹499 or more.</p>
+          <div class="perk-text-group">
+            <span class="perk-tiny-tag" id="sel-banner-badge">SELECTED OFFER</span>
+            <strong class="perk-name" id="sel-banner-title">Spend ₹499 & Get Flat 18% OFF</strong>
+            <p class="perk-desc" id="sel-banner-desc">Instant discount applied on orders of ₹499 or more.</p>
           </div>
-          <div class="pill-check-indicator">✓</div>
+          <div class="perk-check-badge">✓</div>
         </div>
 
-        <!-- Very Cool & Pretty Graphical Family Card -->
-        <div class="pretty-family-showcase">
-          <div class="pretty-top-row">
-            <div class="heartfelt-tag">
-              <span class="sparkle-symbol">✨</span>
+        <!-- ==================================================== -->
+        <!-- LOVABLE & PRETTY GRAPHICAL FAMILY SHOWCASE           -->
+        <!-- ==================================================== -->
+        <div class="lovable-family-hero">
+          
+          <div class="lovable-top-bar">
+            <div class="love-badge">
+              <span class="heart-pulse-icon">❤️</span>
               <span>FROM OUR HEARTS</span>
             </div>
-            <span class="result-badge-mini">Results: Sunday, 15th Nov</span>
+            <span class="date-pill-mini">Results: Sun, 15th Nov</span>
           </div>
 
-          <div class="pretty-content-wrapper">
-            <div class="pretty-cup-graphic">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                <path d="M8 2c0 1.5-1 2-1 3.5s1 2 1 3.5" stroke="#ea580c" stroke-width="2"></path>
-                <path d="M12 2c0 1.5-1 2-1 3.5s1 2 1 3.5" stroke="#f59e0b" stroke-width="2"></path>
-              </svg>
-              <div class="floating-heart-dot">❤️</div>
+          <div class="lovable-main-row">
+            <!-- Graphical Latte Cup with Animated Steam Hearts -->
+            <div class="lovable-graphic-container">
+              <div class="latte-cup-art">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Saucer -->
+                  <ellipse cx="22" cy="37" rx="16" ry="3.5" fill="#E8DEC8" />
+                  <ellipse cx="22" cy="36.5" rx="13" ry="2.5" fill="#FAF6EE" />
+                  
+                  <!-- Cup Body -->
+                  <path d="M9 17C9 26.5 14.5 33 22 33C29.5 33 35 26.5 35 17H9Z" fill="#FFFDF9" stroke="#3D291F" stroke-width="2.2" stroke-linejoin="round"/>
+                  
+                  <!-- Cup Handle -->
+                  <path d="M33 20C36.8 20 39.5 22.2 39.5 25C39.5 27.8 36.8 30 33 30" stroke="#3D291F" stroke-width="2.2" stroke-linecap="round"/>
+                  
+                  <!-- Coffee Crema -->
+                  <ellipse cx="22" cy="17" rx="12" ry="3" fill="#6B3E1F"/>
+                  
+                  <!-- Creamy Heart Latte Art -->
+                  <path d="M22 18.8C20.8 17.2 19 16.8 18.2 17.8C17.5 18.8 18.8 20.2 22 22.2C25.2 20.2 26.5 18.8 25.8 17.8C25 16.8 23.2 17.2 22 18.8Z" fill="#FFF6EB"/>
+                  
+                  <!-- Steaming Love Spirits -->
+                  <path class="steam-float-1" d="M16 11C15 8.5 16.5 6 17 4.5" stroke="#E11D48" stroke-width="1.8" stroke-linecap="round"/>
+                  <path class="steam-float-2" d="M22 12C21.5 9 23 7 23.5 4.5" stroke="#C89B3C" stroke-width="1.8" stroke-linecap="round"/>
+                  <path class="steam-float-3" d="M28 11C29 8.5 27.5 6 27 4.5" stroke="#E11D48" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="floating-sparkle">✨</div>
             </div>
 
-            <div class="pretty-text-group">
-              <h3 class="pretty-headline">
+            <!-- Heartwarming Message -->
+            <div class="lovable-text-wrap">
+              <h3 class="lovable-title">
                 These are just offers — Give us a chance to serve you.
               </h3>
-              <p class="pretty-body">
-                Because we truly love the <strong>Chapter One family</strong>. We want to make our cafe a warmer, better, and more lovable family with every cup and meal we share together.
+              <p class="lovable-paragraph">
+                Because we truly love the <span class="highlight-family">Chapter One family</span>. We want to make our cafe a warmer, better, and more lovable family with every cup and meal we share together.
               </p>
             </div>
           </div>
+
+          <div class="lovable-footer-pill">
+            <span class="coffee-bean-icon">☕</span>
+            <span>You're not just a guest at our table — you're part of our family story.</span>
+          </div>
+
         </div>
 
         <!-- Registration Form -->
-        <form id="giveaway-form" class="minimal-form" novalidate>
+        <form id="giveaway-form" class="cafe-form" novalidate>
           
           <!-- Full Name -->
-          <div class="form-group">
-            <label for="input-name" class="input-label">
+          <div class="field-cluster">
+            <label for="input-name" class="field-title">
               <span>Full Name</span>
               <span class="required-star">*</span>
             </label>
-            <div class="input-field-wrapper">
-              <span class="field-prefix-icon">
+            <div class="input-shell">
+              <span class="input-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
@@ -232,50 +230,49 @@
                 type="text" 
                 id="input-name" 
                 name="name" 
-                class="form-input" 
+                class="cafe-input" 
                 placeholder="Enter your name" 
                 autocomplete="off"
-                autofocus="false"
                 required
               >
             </div>
-            <span class="error-msg" id="error-name">Please enter your name</span>
+            <span class="field-error" id="error-name">Please enter your name</span>
           </div>
 
           <!-- Phone Number -->
-          <div class="form-group">
-            <label for="input-phone" class="input-label">
-              <span>Phone Number (WhatsApp)</span>
+          <div class="field-cluster">
+            <label for="input-phone" class="field-title">
+              <span>WhatsApp / Phone Number</span>
               <span class="required-star">*</span>
             </label>
-            <div class="input-field-wrapper phone-wrapper">
+            <div class="input-shell phone-shell">
               <span class="country-pill">+91</span>
               <input 
                 type="tel" 
                 id="input-phone" 
                 name="phone" 
-                class="form-input phone-field" 
+                class="cafe-input phone-input" 
                 placeholder="98765 43210" 
                 maxlength="14"
                 autocomplete="off"
                 required
               >
             </div>
-            <span class="field-hint">We will notify you at this number when results are announced on Sunday, 15th Nov.</span>
-            <span class="error-msg" id="error-phone">Please enter a valid 10-digit mobile number</span>
-            <span class="error-msg duplicate-alert" id="error-duplicate-phone">
+            <span class="field-hint">We will message you on Sunday, 15th Nov with results & your claim code.</span>
+            <span class="field-error" id="error-phone">Please enter a valid 10-digit phone number</span>
+            <span class="field-error duplicate-alert" id="error-duplicate-phone">
               ⚠️ This phone number has already registered! Each customer can only claim once.
             </span>
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" id="btn-submit" class="minimal-btn primary full-width">
+          <button type="submit" id="btn-submit" class="cafe-btn primary full-width">
             <span class="btn-text">Lock My Offer Registration</span>
-            <div class="minimal-spinner" id="btn-spinner"></div>
+            <div class="cafe-spinner" id="btn-spinner"></div>
           </button>
 
-          <p class="privacy-footnote">
-            🔒 Zero spam. Your phone number is strictly used for order discount verification & Sunday result notification.
+          <p class="privacy-notice">
+            🔒 Zero spam. We strictly use your phone number for offer redemption & Sunday result notification.
           </p>
 
         </form>
@@ -284,86 +281,82 @@
       <!-- ======================================================== -->
       <!-- STEP 3: SUCCESS & NOTIFICATION SCREEN (Graphical Receipt)-->
       <!-- ======================================================== -->
-      <section id="step-success-view" class="card-view" style="display: none;">
+      <section id="step-success-view" class="card-screen" style="display: none;">
         
-        <div class="success-top-graphic">
-          <div class="checkmark-badge">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        <div class="success-celebration-hero">
+          <div class="success-heart-badge">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
           </div>
-          <h2 class="success-heading">You're in the giveaway! 🎉</h2>
-          <p class="success-tagline">Welcome to the family, <strong id="success-user-name">Alex</strong>! Your registration is complete.</p>
+          <h2 class="success-title">You're in the giveaway! 🎉</h2>
+          <p class="success-sub">Welcome to the family, <strong id="success-user-name">Alex</strong>! Your registration is complete.</p>
         </div>
 
-        <!-- Notification Statement with Sunday, 15th Nov -->
-        <div class="notification-callout">
-          <div class="notif-bell-box">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-            </svg>
+        <!-- Official Results Notification Callout -->
+        <div class="notification-card">
+          <div class="notif-badge">
+            <span class="bell-glow">🔔</span>
           </div>
-          <div class="notif-content">
-            <strong class="notif-header">Giveaway Results Confirmation</strong>
-            <p class="notif-body">
+          <div class="notif-details">
+            <strong class="notif-title">Result Notification Update</strong>
+            <p class="notif-message">
               You will get notified at <strong id="success-user-phone">+91 98765 43210</strong> on <strong>Sunday, 15th November</strong> if you won the prize.
             </p>
           </div>
         </div>
 
-        <!-- Graphical Voucher Receipt -->
-        <div class="voucher-ticket">
-          <div class="ticket-header-row">
-            <span class="ticket-brand">CHAPTER ONE CAFE</span>
-            <span class="ticket-status-pill">ACTIVE PASS</span>
+        <!-- Graphical Voucher Ticket Receipt -->
+        <div class="cafe-voucher-ticket">
+          <div class="ticket-top-band">
+            <span class="ticket-cafe-name">CHAPTER ONE CAFE</span>
+            <span class="ticket-status-pill">OFFICIAL PASS</span>
           </div>
 
-          <div class="ticket-offer-highlight">
-            <span class="highlight-label">REGISTERED OFFER</span>
-            <h3 class="highlight-name" id="success-offer-title">Spend ₹499 & Get Flat 18% OFF</h3>
+          <div class="ticket-perk-block">
+            <span class="ticket-tag">REGISTERED OFFER</span>
+            <h3 class="ticket-perk-title" id="success-offer-title">Spend ₹499 & Get Flat 18% OFF</h3>
           </div>
 
-          <!-- Perforated Cut-Line Graphic -->
-          <div class="perforated-divider" aria-hidden="true">
-            <div class="notch left"></div>
-            <div class="dash-line"></div>
-            <div class="notch right"></div>
+          <!-- Perforated Line Graphic -->
+          <div class="ticket-perforated-row" aria-hidden="true">
+            <div class="ticket-notch left"></div>
+            <div class="ticket-dash"></div>
+            <div class="ticket-notch right"></div>
           </div>
 
-          <div class="ticket-grid">
-            <div class="ticket-cell">
-              <span class="cell-label">VOUCHER ID</span>
-              <strong class="cell-code" id="success-entry-id">#C1-4829</strong>
+          <div class="ticket-meta-grid">
+            <div class="meta-col">
+              <span class="meta-label">VOUCHER CODE</span>
+              <strong class="meta-code" id="success-entry-id">#C1-4829</strong>
             </div>
-            <div class="ticket-cell">
-              <span class="cell-label">RESULT DATE</span>
-              <span class="cell-val bold-date">Sun, 15th Nov</span>
+            <div class="meta-col">
+              <span class="meta-label">RESULT DATE</span>
+              <span class="meta-date">Sun, 15th Nov</span>
             </div>
-            <div class="ticket-cell">
-              <span class="cell-label">REDEEM VENUE</span>
-              <span class="cell-val">Chapter One Counter</span>
+            <div class="meta-col">
+              <span class="meta-label">LOCATION</span>
+              <span class="meta-val">Chapter One Counter</span>
             </div>
           </div>
 
-          <!-- Minimalist Vector Barcode Representation -->
-          <div class="barcode-graphic" aria-hidden="true">
-            <div class="bars"></div>
-            <span class="barcode-txt">VERIFIED CUSTOMER ENTRY</span>
+          <!-- Vector Barcode Representation -->
+          <div class="ticket-barcode-box" aria-hidden="true">
+            <div class="barcode-lines"></div>
+            <span class="barcode-label">VERIFIED FAMILY MEMBER ENTRY</span>
           </div>
         </div>
 
         <!-- Actions -->
-        <div class="success-actions-stack">
-          <button id="btn-share-whatsapp" class="minimal-btn whatsapp full-width">
+        <div class="success-actions">
+          <button id="btn-share-whatsapp" class="cafe-btn whatsapp full-width">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
             </svg>
             <span>Share Offer with Friends on WhatsApp</span>
           </button>
           
-          <button id="btn-submit-another" class="minimal-btn secondary full-width">
+          <button id="btn-submit-another" class="cafe-btn ghost full-width">
             Register Another Mobile Number
           </button>
         </div>
@@ -372,10 +365,10 @@
 
     </main>
 
-    <!-- Minimal Clean Footer (No Settings Button) -->
-    <footer class="app-footer">
+    <!-- Clean Footer -->
+    <footer class="cafe-footer">
       <span>Chapter One Cafe • All rights reserved</span>
-      <span class="dot-sep">•</span>
+      <span class="footer-dot">•</span>
       <span>Giveaway results live on Sunday, 15th Nov</span>
     </footer>
 

@@ -8,8 +8,11 @@
   // SVG Vector Graphics Library for Offers
   const GRAPHICS = {
     tag: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-      <line x1="7" y1="7" x2="7.01" y2="7"></line>
+      <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+      <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+      <line x1="6" y1="1" x2="6" y2="4"></line>
+      <line x1="10" y1="1" x2="10" y2="4"></line>
+      <line x1="14" y1="1" x2="14" y2="4"></line>
     </svg>`,
     academic: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
@@ -24,7 +27,7 @@
   };
 
   const THEME_ACCENTS = {
-    tag: 'blue',
+    tag: 'gold',
     academic: 'emerald',
     handshake: 'purple'
   };
@@ -136,9 +139,9 @@
   function goToFormStep() {
     if (!state.selectedOffer) return;
 
-    const accent = THEME_ACCENTS[state.selectedOffer.graphic] || 'blue';
+    const accent = THEME_ACCENTS[state.selectedOffer.graphic] || 'gold';
     DOM.selBannerIconBox.innerHTML = GRAPHICS[state.selectedOffer.graphic] || GRAPHICS.tag;
-    DOM.selBannerIconBox.className = `pill-graphic ${accent}`;
+    DOM.selBannerIconBox.className = `perk-graphic-pod ${accent}`;
     DOM.selBannerBadge.textContent = state.selectedOffer.badge;
     DOM.selBannerTitle.textContent = state.selectedOffer.title;
     DOM.selBannerDesc.textContent = state.selectedOffer.description;
@@ -147,7 +150,7 @@
     DOM.stepFormView.style.display = 'block';
 
     // Highlight the family line in a clean, minimal style when entering Step 2
-    const familyCard = document.querySelector('.pretty-family-showcase');
+    const familyCard = document.querySelector('.lovable-family-hero');
     if (familyCard) {
       familyCard.classList.remove('highlight-focus');
       // trigger reflow for smooth re-animation
@@ -351,7 +354,7 @@
         particleCount: 50,
         spread: 60,
         origin: { y: 0.6 },
-        colors: ['#2563eb', '#10b981', '#f59e0b', '#7c3aed']
+        colors: ['#c89b3c', '#e11d48', '#f59e0b', '#24160f', '#fb7185']
       });
     }
   }
